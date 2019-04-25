@@ -1,0 +1,44 @@
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+ -->
+<html>
+  <head>
+    <title>Getting Started With Dropship Extension</title>
+    
+
+    <!--
+      - JavaScript and HTML must be in separate files: see our Content Security
+      - Policy documentation[1] for details and explanation.
+      -
+      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
+     -->
+    <script src="jquery.min.js"></script>
+    <script src="popup.js"></script>
+  </head>
+  <body style="width:300px">
+	<h1> Push products to store </h1>
+	<!-- Categories -->
+    <div id="categories-container">
+		<button id="sync-categories">Sync Categories</button>
+		<input list="categories-list" id="category" />
+		<datalist id="categories-list">
+		<option value="505">Beads</option><option value="504">Jewelry Findings & Components</option><option value="503">Jewelry Packing & Display</option><option value="502">Jewelry Tools & Equipments</option><option value="501">Charms</option><option value="500">Cuff Bracelets</option><option value="499">Strand Bracelets</option><option value="498">Wrap Bracelets</option><option value="497">Bangles</option><option value="496">Chain & Link Barcelets</option><option value="495">Charm Barcelets</option><option value="494">Torques</option><option value="493">Power Necklaces</option><option value="492">Pendant Necklaces</option><option value="491">Choker Necklaces</option><option value="490">Chain Necklaces</option><option value="489">Anklets</option><option value="488">Body Jewelry</option><option value="487">Hair Jewelry</option><option value="486">Brooches</option><option value="485">Bridal Jewelry Sets</option><option value="484">Jewelry Sets</option><option value="483">Clip Earrings</option><option value="482">Hoop Earrings</option><option value="481">Drop Earrings</option><option value="480">Stud Earrings</option><option value="479">Jewelry Sets</option><option value="478">Bracelets & Bangles</option><option value="477">Pendants</option><option value="476">Earrings</option><option value="475">Necklaces</option><option value="474">Rings</option><option value="473">Beads & Jewelry Making</option><option value="472">Bracelets & Bangles</option><option value="471">Necklaces & Pendants</option><option value="470">Jewelry Sets & More</option><option value="469">Earrings</option><option value="468">Fine Jewelry</option>
+		</datalist>
+	</div>
+	<h3 id="total-products"></h3>
+	<!-- Products -->
+	<div id="products">
+	</div>
+	<h2> click on push button</h2>
+	<!-- Push -->
+	<div id="push">
+		<button id="push-button">Push</button>
+		<button id="clear-push-product">Clear</button>
+		<div id="message">message box</div>
+	</div>
+  </body>
+</html>
+

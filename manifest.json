@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+
+  "name": "Dropship",
+  "short_name": "DEXT",
+  "description": "AliExpress drop ship extension",
+  "author": "Azeem Haider",
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "version": "1.0",
+  
+  "content_scripts" : [
+	{
+		"matches": ["*://www.aliexpress.com/*"],
+		"css" : ["style.css"],
+		"js": ["jquery.min.js", "content.js"],
+		"run_at": "document_end"
+	}
+  ],
+  
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "activeTab",
+	"storage"
+  ]
+}
